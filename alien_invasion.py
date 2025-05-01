@@ -60,14 +60,14 @@ class AlienInvasion:
             self.ship.moving_left = False
     
     def _fire_bullet(self):
-        new_bullet = Bullet(self)
-        self.bullets.add(new_bullet)
+            new_bullet = Bullet(self)
+            self.bullets.add(new_bullet)
 
     def _update_screen(self):
         self.screen.fill(self.settings.bg_color)
+        self.ship.blitme()
         for bullet in self.bullets.sprites():
             bullet.draw_bullet()
-        self.ship.blitme()
         pygame.display.flip()
 
 if __name__ == '__main__':

@@ -14,7 +14,7 @@ class Ship:
         self.rect = self.image.get_rect()
         
         # Start each new ship at the bottom center of the screen.
-        self.rect.midbottom = self.screen_rect.midbottom
+        self.rect.midbottom = ai_game.screen.get_rect().midbottom
         self.x = float(self.rect.x)
         self.moving_right = False
         self.moving_left = False
